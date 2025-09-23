@@ -1,0 +1,25 @@
+/* griglia */
+.rfTileGrid {
+  padding: 1rem;
+  display: flex;
+}
+
+/* singola tile: dimensioni e margine */
+.rfTile {
+  margin: 0.5rem;
+  width: 180px;
+  height: 140px;
+}
+
+/* evidenziare la tile 'Standard RF' se vuoi */
+.rfStandard .sapMGTHeader {
+  font-weight: 600;
+}
+
+/* comportamento mobile: due per riga circa */
+@media (max-width: 600px) {
+  .rfTile {
+    width: 46vw;
+    height: 120px;
+  }
+}

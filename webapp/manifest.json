@@ -1,0 +1,112 @@
+{
+  "_version": "1.76.0",
+  "sap.app": {
+    "id": "rfmenu",
+    "type": "application",
+    "i18n": "i18n/i18n.properties",
+    "applicationVersion": {
+      "version": "0.0.1"
+    },
+    "title": "{{appTitle}}",
+    "description": "{{appDescription}}",
+    "resources": "resources.json",
+    "sourceTemplate": {
+      "id": "@sap/generator-fiori:basic",
+      "version": "1.18.7",
+      "toolsId": "4978e0ee-d10d-4dd5-b5c8-7ddda7060998"
+    },
+    "crossNavigation": {
+      "inbounds": {
+        "main": {
+          "semanticObject": "RFMenu",
+          "action": "display",
+          "title": "{{appTitle}}",
+          "signature": {
+            "parameters": {},
+            "additionalParameters": "allowed"
+          }
+        }
+      }
+    }
+  },
+  "sap.ui": {
+    "technology": "UI5",
+    "icons": {
+      "icon": "",
+      "favIcon": "",
+      "phone": "",
+      "phone@2": "",
+      "tablet": "",
+      "tablet@2": ""
+    },
+    "deviceTypes": {
+      "desktop": true,
+      "tablet": true,
+      "phone": true
+    }
+  },
+  "sap.ui5": {
+    "config": {
+      "hideShellHeader": true
+    },
+    "flexEnabled": true,
+    "dependencies": {
+      "minUI5Version": "1.140.0",
+      "libs": {
+        "sap.m": {},
+        "sap.ui.core": {}
+      }
+    },
+    "contentDensities": {
+      "compact": true,
+      "cozy": true
+    },
+    "models": {
+      "i18n": {
+        "type": "sap.ui.model.resource.ResourceModel",
+        "settings": {
+          "bundleName": "rfmenu.i18n.i18n"
+        }
+      }
+    },
+    "resources": {
+      "css": [
+        {
+          "uri": "css/style.css"
+        }
+      ]
+    },
+    "routing": {
+      "config": {
+        "routerClass": "sap.m.routing.Router",
+        "controlAggregation": "pages",
+        "controlId": "app",
+        "transition": "slide",
+        "type": "View",
+        "viewType": "XML",
+        "path": "rfmenu.view",
+        "async": true,
+        "viewPath": "rfmenu.view"
+      },
+      "routes": [
+        {
+          "name": "RouteMenu",
+          "pattern": ":?query:",
+          "target": ["TargetMenu"]
+        }
+      ],
+      "targets": {
+        "TargetMenu": {
+          "id": "Menu",
+          "name": "Menu"
+        }
+      }
+    },
+    "rootView": {
+      "viewName": "rfmenu.view.App",
+      "type": "XML",
+      "id": "App",
+      "async": true
+    }
+  }
+}
