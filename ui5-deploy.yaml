@@ -21,6 +21,6 @@ builder:
         app:
           name: ZRF_MENU
           package: ZFIORI_APPS
-          transport: PBGK900424
+          transport: PBGK900465
         exclude:
           - /test/

@@ -65,10 +65,11 @@ sap.ui.define(
       },
 
       onNavStandard: function () {
-        this._navigateToApp("zrf_app3", {
-          semanticObject: "EWMSystem",
-          action: "testRFEnvironment",
-        });
+        var sOrigin = window.location.origin;
+        var sUrl =
+          sOrigin + "/sap/bc/gui/sap/its/ewm_mobgui?~transaction=/scwm/rfui";
+
+        this._navigateByUrl(sUrl); 
       },
 
       //onNavStandard: function () {
