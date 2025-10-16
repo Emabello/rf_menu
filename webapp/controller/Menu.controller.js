@@ -69,7 +69,7 @@ sap.ui.define(
         var sUrl =
           sOrigin + "/sap/bc/gui/sap/its/ewm_mobgui?~transaction=/scwm/rfui";
 
-        this._navigateByUrl(sUrl); 
+        this._navigateByUrl(sUrl);
       },
 
       //onNavStandard: function () {
@@ -188,6 +188,10 @@ sap.ui.define(
         sInfo += "- Origin: " + window.location.origin;
 
         alert(sInfo);
+      },
+
+      onLogoff: function () {
+        window.location.href = "/sap/public/bc/icf/logoff";
       },
     });
   }

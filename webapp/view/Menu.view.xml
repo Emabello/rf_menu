@@ -2,52 +2,22 @@
     xmlns:mvc="sap.ui.core.mvc"
     xmlns="sap.m">
 
-    <Page id="menuPage" showHeader="false">
+    <Page id="menuPage" showHeader="true">
+        <headerContent>
+            <Button id="logoffButton" 
+                icon="sap-icon://log" 
+                text="Sign Out" 
+                type="Emphasized"
+                press="onLogoff"/>
+        </headerContent>
         <content>
             <!-- FlexBox usato per disporre le GenericTile in griglia responsiva -->
             <FlexBox id="_IDGenFlexBox1" wrap="Wrap" justifyContent="Center" class="rfTileGrid" renderType="Bare">
                 <items>
-
-                    <GenericTile id="_IDGenGenericTile" header="RF Interface" press="onNavRF1" class="rfTile">
-                        <tileContent>
-                            <TileContent id="_IDGenTileContent">
-                                <content>
-                                    <Image id="_IDGenImage" src="sap-icon://simulate" decorative="true"/>
-                                </content>
-                            </TileContent>
-                        </tileContent>
-                    </GenericTile>
-
-                    <GenericTile id="_IDGenGenericTile1" header="Interface RF Storage Location" press="onNavRF2" class="rfTile">
-                        <tileContent>
-                            <TileContent id="_IDGenTileContent1">
-                                <content>
-                                    <Image id="_IDGenImage1" src="sap-icon://documents" decorative="true"/>
-                                </content>
-                            </TileContent>
-                        </tileContent>
-                    </GenericTile>
-
-                    <GenericTile id="_IDGenGenericTile2" header="Rf Interface Reception" press="onNavRF3" class="rfTile">
-                        <tileContent>
-                            <TileContent id="_IDGenTileContent2">
-                                <content>
-                                    <Image id="_IDGenImage2" src="sap-icon://shipping-status" decorative="true"/>
-                                </content>
-                            </TileContent>
-                        </tileContent>
-                    </GenericTile>
-
-                    <GenericTile id="_IDGenGenericTile4" header="Test RF Enviroment" press="onNavStandard" class="rfTile rfStandard">
-                        <tileContent>
-                            <TileContent id="_IDGenTileContent4">
-                                <content>
-                                    <Image id="_IDGenImage4" src="sap-icon://action" decorative="true"/>
-                                </content>
-                            </TileContent>
-                        </tileContent>
-                    </GenericTile>
-
+                    <GenericTile id="_IDGenGenericTile" header="RF Interface" press="onNavRF1" class="rfTile"/>
+                    <GenericTile id="_IDGenGenericTile1" header="Interface RF Storage Location" press="onNavRF2" class="rfTile"/>
+                    <GenericTile id="_IDGenGenericTile2" header="Rf Interface Reception" press="onNavRF3" class="rfTile"/>
+                    <GenericTile id="_IDGenGenericTile4" header="Test RF Enviroment" press="onNavStandard" class="rfTile"/>
                 </items>
             </FlexBox>
         </content>
