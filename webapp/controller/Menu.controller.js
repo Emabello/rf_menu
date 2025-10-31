@@ -59,7 +59,7 @@ sap.ui.define(
 
       onNavRF3: function () {
         this._navigateToApp("zrf_app3", {
-          semanticObject: "RFInterfaceReception",
+          semanticObject: "RFInterfaceReceptionV2",
           action: "display",
         });
       },
